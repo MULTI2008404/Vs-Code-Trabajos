@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persona 2 | KDE Studios</title>
+<link rel="stylesheet" href="../../estilos.css">
+<script src="../../script.js" defer></script>
+</head>
+<body class="personal">
+
+
+<header id="inicio">
+  <a class="logo" href="../../index.html"><span class="logo-marca" aria-hidden="true"></span>KDE Studios</a>
+  <nav aria-label="Principal">
+    <a href="#identidad">Quién soy</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#multimedia">Multimedia</a>
+    <a href="#contacto">Contacto</a>
+    <a href="../../index.html">Volver al equipo</a>
+  </nav>
+  <h1>Persona 2</h1>
+  <p class="lead">Videojuegos</p>
+</header>
+
+<main>
+
+  
+  <section id="identidad">
+    <h2>Quién soy</h2>
+    <figure class="avatar">
+      <img src="../../imagenes/perfil-de-usuario-2459581278.png" alt="Anillos de luz y un hexágono brillante que representan a Kai Píxel">
+      <figcaption>Persona 2</figcaption>
+    </figure>
+    <p>Creo juegos pequeños con mundos que se pueden explorar.</p>
+    <p>Me interesan el diseño de niveles y el pixel art.</p>
+  </section>
+
+ 
+  <section id="trabajos">
+    <h2>Mis trabajos</h2>
+    <div class="rejilla">
+      <article>
+        <figure>
+          <img src="imagenes/Imagen 21 nov 2026, 08_02_58-3.png" alt="Un sol sobre una cuadrícula en perspectiva, como el horizonte de una isla">
+          <figcaption>Isla Cometa</figcaption>
+        </figure>
+        <h3>Isla Cometa</h3>
+        <p>Una isla para explorar sin combates.</p>
+        <p><strong>Herramienta:</strong> Godot</p>
+      </article>
+      <article>
+        <figure>
+          <img src="imagenes/Imagen 21 nov 2026, 08_02_59-4.png" alt="Ondas de colores que representan el eco dentro de un laberinto">
+          <figcaption>Laberinto Eco</figcaption>
+        </figure>
+        <h3>Laberinto Eco</h3>
+        <p>Un laberinto donde el sonido guía al jugador.</p>
+        <p><strong>Herramienta:</strong> Unity</p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section id="multimedia">
+    <h2>Experiencia multimedia</h2>
+    <h3>Audio</h3>
+    <audio controls preload="metadata">
+      <source src="audio/02_Videojuegos_Suave.m4a" type="audio/mp4">
+      Tu navegador no admite audio HTML5.
+    </audio>
+    <h3>Video</h3>
+    <video controls preload="metadata" playsinline>
+      <source src="videos/02_Video_Videojuegos_10s.mp4" type="video/mp4">
+      Tu navegador no admite video HTML5.
+    </video>
+    <p>Un ambiente electrónico como el de mis juegos. Un fondo de color en movimiento, como el menú de un juego.</p>
+  </section>
+
+ 
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form action="#" method="get">
+      <p class="aviso">Formulario demostrativo: no guarda ni envía datos. Usa solo datos ficticios.</p>
+      <p><label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" required></p>
+      <p><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" required></p>
+      <p><label for="tipo">Tipo de proyecto</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Elige una opción</option>
+          <option value="ilustracion">Ilustración</option>
+          <option value="videojuego">Videojuego</option>
+          <option value="animacion">Animación</option>
+          <option value="web">Sitio web</option>
+        </select></p>
+      <fieldset>
+        <legend>Modalidad de colaboración</legend>
+        <label><input type="radio" name="modalidad" value="remota" required> Remota</label>
+        <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
+        <label><input type="radio" name="modalidad" value="mixta"> Mixta</label>
+      </fieldset>
+      <p><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" required></textarea></p>
+      <button type="submit">Enviar (demostración)</button>
+    </form>
+  </section>
+
+</main>
+
+
+<footer>
+  <p><a href="../../index.html">Volver al equipo</a></p>
+  <p>KDE Studios · Diseño Multimedia</p>
+</footer>
+
+</body>
+</html>

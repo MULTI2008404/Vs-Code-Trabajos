@@ -1,0 +1,54 @@
+/* COLORES: noche #0d0b1e · ciruela #1c1636 · violeta #7c4dff · cian #27e1d6 · coral #ff5c8a · niebla #e9e6ff · tenue #b4aed6 */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@400;500&display=swap');
+:root{--noche:#0d0b1e;--ciruela:#1c1636;--violeta:#7c4dff;--cian:#27e1d6;--coral:#ff5c8a;--niebla:#e9e6ff;--tenue:#b4aed6}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:4rem}
+body{background:var(--noche);color:var(--niebla);font:400 1.05rem/1.7 Inter,system-ui,sans-serif}
+header,main,footer{position:relative;z-index:1}
+
+/* Fondo de formas creado por script.js */
+.fondo{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+/* Logo y menú */
+.logo{position:fixed;top:.9rem;left:1.5rem;z-index:20;display:flex;align-items:center;gap:.6rem;font:800 1.15rem Syne,sans-serif;color:var(--niebla);text-decoration:none}
+.logo-marca{width:26px;height:28px;background:linear-gradient(135deg,var(--violeta),var(--cian));clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+nav{position:fixed;top:.7rem;right:1.2rem;z-index:20;display:flex;gap:.2rem;padding:.3rem;border-radius:2rem;font-size:.9rem;background:rgba(28,22,54,.75);backdrop-filter:blur(12px);border:1px solid rgba(233,230,255,.12)}
+nav a{padding:.35rem .9rem;border-radius:2rem;color:var(--tenue);text-decoration:none}
+nav a:hover,nav a.activo{background:var(--violeta);color:#fff}
+
+/* Portada */
+header{min-height:92vh;max-width:62rem;margin:0 auto;padding:7rem 1.5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+h1{max-width:14ch;font:800 clamp(2.4rem,7.5vw,5.4rem)/1.02 Syne,sans-serif;letter-spacing:-.02em;background:linear-gradient(100deg,#fff,var(--cian) 60%,var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:1.5rem;max-width:46ch;font-size:1.25rem;color:var(--tenue)}
+
+/* Secciones y texto */
+section{max-width:62rem;margin:0 auto;padding:4.5rem 1.5rem}
+h2{width:fit-content;margin-bottom:1.5rem;padding-bottom:.6rem;font:800 clamp(1.8rem,4vw,2.7rem)/1.1 Syne,sans-serif;border-bottom:3px solid;border-image:linear-gradient(90deg,var(--violeta),transparent) 1}
+h3{margin:2.2rem 0 .6rem;font:600 1.35rem Syne,sans-serif;color:var(--cian)}
+p{max-width:64ch;margin-bottom:1rem}
+strong{color:#fff;font-weight:500}
+em{color:var(--coral)}
+a{color:var(--cian)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+address{font-style:normal}
+
+/* Listas */
+ul,ol{list-style:none;padding:0;margin:1.5rem 0;display:grid;gap:1rem}
+ul{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+ul li{padding:1.2rem 1.3rem;border-radius:1rem 1rem 1rem 0;background:linear-gradient(160deg,rgba(124,77,255,.22),rgba(28,22,54,.6));border:1px solid rgba(124,77,255,.35)}
+ol{counter-reset:paso;max-width:46rem}
+ol li{counter-increment:paso;position:relative;padding-left:3.6rem}
+ol li::before{content:counter(paso);position:absolute;left:0;top:-.1rem;width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--violeta),var(--cian));color:var(--noche);font:800 1.1rem Syne,sans-serif}
+ol li:not(:last-child)::after{content:"";position:absolute;left:1.2rem;top:2.6rem;bottom:-1rem;width:2px;background:rgba(39,225,214,.3)}
+
+/* Imágenes, desplegable y pie */
+figure{margin:2.5rem 0}
+figure img{display:block;width:100%;height:auto;border-radius:1.2rem;border:1px solid rgba(233,230,255,.15);box-shadow:0 0 60px rgba(124,77,255,.3)}
+figcaption{margin-top:.7rem;font-size:.9rem;font-style:italic;color:var(--tenue)}
+details{max-width:64ch;margin-top:2rem;padding:1rem 1.3rem;border:1px solid rgba(39,225,214,.35);border-radius:1rem}
+summary{cursor:pointer;font-weight:500;color:var(--cian)}
+details[open] summary{margin-bottom:.6rem}
+footer{margin-top:3rem;padding:2.5rem 1.5rem;text-align:center;font-size:.9rem;color:var(--tenue);background:rgba(28,22,54,.8);border-top:1px solid rgba(233,230,255,.12)}
+footer p{margin:0 auto .5rem}
+
+@media(max-width:640px){nav{top:3.4rem;left:1rem;right:1rem;justify-content:center;flex-wrap:wrap}nav a{padding:.3rem .6rem}.logo{left:1rem}header{padding-top:10rem}}

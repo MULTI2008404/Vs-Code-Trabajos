@@ -1,0 +1,64 @@
+/* COLORES: noche #0d0b1e · ciruela #1c1636 · violeta #7c4dff · cian #27e1d6 · coral #ff5c8a · niebla #e9e6ff · tenue #b4aed6 */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@400;500&display=swap');
+:root{--noche:#0d0b1e;--ciruela:#1c1636;--violeta:#7c4dff;--cian:#27e1d6;--coral:#ff5c8a;--niebla:#e9e6ff;--tenue:#b4aed6}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:4rem}
+body{background:var(--noche);color:var(--niebla);font:400 1.05rem/1.7 Inter,system-ui,sans-serif}
+
+/* Logo y menú */
+.logo{position:fixed;top:.9rem;left:1.5rem;z-index:20;display:flex;align-items:center;gap:.6rem;font:800 1.15rem Syne,sans-serif;color:var(--niebla);text-decoration:none}
+.logo-marca{width:26px;height:28px;background:linear-gradient(135deg,var(--violeta),var(--cian));clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+nav{position:fixed;top:.7rem;right:1.2rem;z-index:20;display:flex;gap:.2rem;padding:.3rem;border-radius:2rem;font-size:.9rem;background:rgba(28,22,54,.85);backdrop-filter:blur(12px);border:1px solid rgba(233,230,255,.12)}
+nav a{padding:.35rem .9rem;border-radius:2rem;color:var(--tenue);text-decoration:none}
+nav a:hover{background:var(--violeta);color:#fff}
+
+/* Cabecera visual hecha solo con CSS: luces, anillos y hexágono */
+header{position:relative;overflow:hidden;min-height:88vh;padding:7rem max(1.5rem,calc((100vw - 62rem)/2)) 3rem;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 15% 20%,rgba(124,77,255,.5),transparent 40%),radial-gradient(circle at 85% 85%,rgba(255,92,138,.35),transparent 40%),var(--noche)}
+header::before{content:"";position:absolute;right:-8rem;top:50%;width:34rem;height:34rem;margin-top:-17rem;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 2.2rem,rgba(39,225,214,.45) 2.2rem 2.3rem)}
+header::after{content:"";position:absolute;right:4.5rem;top:50%;width:9rem;height:10rem;margin-top:-5rem;background:linear-gradient(135deg,var(--violeta),var(--cian));clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+header h1,header .lead{position:relative;z-index:1}
+.personal header{min-height:60vh}
+h1{max-width:14ch;font:800 clamp(2.4rem,7.5vw,5.4rem)/1.02 Syne,sans-serif;letter-spacing:-.02em;background:linear-gradient(100deg,#fff,var(--cian) 60%,var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:1.5rem;max-width:46ch;font-size:1.25rem;color:var(--tenue)}
+
+/* Secciones y texto */
+section{max-width:62rem;margin:0 auto;padding:4rem 1.5rem}
+h2{width:fit-content;margin-bottom:1.5rem;padding-bottom:.6rem;font:800 clamp(1.8rem,4vw,2.7rem)/1.1 Syne,sans-serif;border-bottom:3px solid;border-image:linear-gradient(90deg,var(--violeta),transparent) 1}
+h3{margin:1rem 0 .4rem;font:600 1.3rem Syne,sans-serif;color:var(--cian)}
+p{max-width:64ch;margin-bottom:1rem}
+strong{color:#fff;font-weight:500}
+a{color:var(--cian)}
+a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+/* Tarjetas (integrantes y proyectos) */
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem;margin-top:1.5rem}
+article{padding:1.2rem;border-radius:1rem;background:linear-gradient(160deg,rgba(124,77,255,.22),rgba(28,22,54,.6));border:1px solid rgba(124,77,255,.35)}
+article img{display:block;width:100%;height:auto;margin-bottom:.8rem;border-radius:.8rem}
+article figure{margin:0 0 .8rem}
+article figure img{margin:0}
+article a{display:inline-block;margin-top:.4rem;padding:.5rem 1.1rem;border-radius:2rem;background:linear-gradient(135deg,var(--violeta),var(--cian));color:var(--noche);font-weight:700;text-decoration:none}
+
+/* Imágenes y multimedia */
+figure{margin:1.5rem 0}
+figure img{display:block;width:100%;height:auto;border-radius:1rem;border:1px solid rgba(233,230,255,.15);box-shadow:0 0 50px rgba(124,77,255,.3)}
+figcaption{margin-top:.6rem;font-size:.9rem;font-style:italic;color:var(--tenue)}
+.avatar{max-width:20rem}
+audio,video{display:block;width:100%;max-width:40rem;margin-bottom:1rem;border-radius:1rem}
+
+/* Formulario */
+form{max-width:36rem}
+.aviso{padding:.7rem 1rem;border-left:4px solid var(--coral);background:rgba(255,92,138,.12)}
+label,legend{display:block;margin-bottom:.3rem;font-weight:500}
+input[type=text],input[type=email],select,textarea{width:100%;padding:.65rem .8rem;border-radius:.6rem;border:1px solid rgba(124,77,255,.5);background:var(--ciruela);color:var(--niebla);font:inherit}
+fieldset{margin-bottom:1rem;padding:.8rem 1rem;border:1px solid rgba(124,77,255,.5);border-radius:.6rem}
+fieldset label{display:inline-block;margin-right:1.2rem}
+button{padding:.7rem 1.6rem;border:0;border-radius:2rem;background:linear-gradient(135deg,var(--violeta),var(--cian));color:var(--noche);font:700 1rem Inter,sans-serif;cursor:pointer}
+footer{padding:2rem 1.5rem;text-align:center;font-size:.95rem;color:var(--tenue);background:rgba(28,22,54,.8);border-top:1px solid rgba(233,230,255,.12)}
+footer p{margin:0 auto .4rem}
+
+@media(max-width:700px){header::after{display:none}header::before{opacity:.4}nav{top:3.4rem;left:1rem;right:1rem;justify-content:center;flex-wrap:wrap}nav a{padding:.3rem .6rem}.logo{left:1rem}header{padding-top:10rem}}
+
+/* Estados creados por script.js */
+nav a.activo{background:var(--violeta);color:#fff}
+.confirmacion{margin:1rem 0 0;padding:.7rem 1rem;border-left:4px solid var(--cian);background:rgba(39,225,214,.12)}
+.confirmacion:empty{display:none}

@@ -1,0 +1,52 @@
+/* COLORES: marino #0b1f3a · hielo #eef4fa · blanco #ffffff · naranja #ff6b2c · amarillo #ffc83d · azul #2f6df6 */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Figtree:wght@400;500;700&display=swap');
+:root{--marino:#0b1f3a;--hielo:#eef4fa;--blanco:#fff;--naranja:#ff6b2c;--amarillo:#ffc83d;--azul:#2f6df6}
+*{box-sizing:border-box;margin:0}
+body{background:var(--hielo);color:var(--marino);font:400 1.1rem/1.65 Figtree,system-ui,sans-serif}
+
+/* Portada */
+header{padding:1.5rem 1.5rem 1.5rem;background:var(--marino);color:var(--hielo)}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.6rem}
+nav a{color:var(--hielo);text-decoration:none;font-weight:500}
+nav a:hover,nav a.activo{color:var(--amarillo);text-decoration:underline;text-underline-offset:6px}
+nav .logo{margin-right:auto;display:flex;align-items:center;gap:.6rem;font:800 1.1rem Unbounded,sans-serif;text-decoration:none}
+.logo-marca{width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,var(--naranja) 50%,var(--amarillo) 50%)}
+h1{margin-top:5rem;font:800 clamp(3rem,12vw,8.5rem)/1 Unbounded,sans-serif;letter-spacing:-.03em}
+.lead{margin-top:1rem;max-width:30ch;font-size:1.4rem;color:var(--amarillo)}
+.mosaico{display:block;width:calc(100% + 3rem);height:192px;margin:3rem -1.5rem -1.5rem}
+
+/* Secciones en dos columnas: título a la izquierda, contenido a la derecha */
+section{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);column-gap:4rem;max-width:68rem;margin:0 auto;padding:4.5rem 1.5rem;border-bottom:2px solid var(--marino)}
+section:last-child{border-bottom:0}
+section>*{grid-column:2}
+h2{grid-column:1;grid-row:1/span 6;align-self:start;position:sticky;top:1.5rem;font:800 1.7rem/1.1 Unbounded,sans-serif}
+h3{margin:2rem 0 .5rem;font:600 1.15rem Unbounded,sans-serif;color:var(--azul)}
+p{margin-bottom:1rem}
+strong{font-weight:700}
+em{font-style:italic;color:var(--naranja);font-weight:500}
+a{color:var(--azul);font-weight:700}
+a:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
+
+/* Cita */
+blockquote{margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:8px solid var(--naranja);background:var(--blanco);font:600 1.3rem/1.4 Unbounded,sans-serif}
+cite{display:block;margin-top:.8rem;font:500 .95rem Figtree,sans-serif;font-style:normal;color:var(--azul)}
+
+/* Listas */
+ul,ol{list-style:none;padding:0;margin:1rem 0 1.5rem;display:grid;gap:1.2rem}
+ul{grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+ul li{padding-top:.9rem;border-top:5px solid var(--marino)}
+ul li:nth-child(1){border-color:var(--naranja)}
+ul li:nth-child(2){border-color:var(--amarillo)}
+ul li:nth-child(3){border-color:var(--azul)}
+ol{counter-reset:paso}
+ol li{counter-increment:paso;display:flex;align-items:baseline;gap:1.2rem;padding-bottom:1rem;border-bottom:2px solid var(--marino);font-weight:500}
+ol li::before{content:counter(paso);flex:none;width:2rem;font:800 2rem Unbounded,sans-serif;color:var(--naranja)}
+
+/* Imágenes y pie */
+figure{margin:2rem 0}
+figure img{display:block;width:100%;height:auto;border:2px solid var(--marino)}
+figcaption{margin-top:.6rem;font-size:.95rem;color:var(--azul);font-weight:500}
+footer{padding:2rem 1.5rem;text-align:center;background:var(--marino);color:var(--hielo);font-size:.95rem}
+footer p{margin:0}
+
+@media(max-width:800px){section{display:block;padding:3.5rem 1.5rem}h2{position:static;margin-bottom:1.5rem}nav .logo{width:100%}}
