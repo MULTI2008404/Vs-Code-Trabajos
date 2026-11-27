@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keny López | KDE Studios</title>
 <link rel="stylesheet" href="../../estilos.css">
+<link rel="stylesheet" href="styles.css">
 <script src="../../script.js" defer></script>
+<script src="script.js" defer></script>
 </head>
 <body class="personal">
 
@@ -17,6 +18,7 @@
     <a href="#identidad">Quién soy</a>
     <a href="#trabajos">Trabajos</a>
     <a href="#multimedia">Multimedia</a>
+    <a href="#laboratorio">Laboratorio</a>
     <a href="#contacto">Contacto</a>
     <a href="../../index.html">Volver al equipo</a>
   </nav>
@@ -72,10 +74,33 @@
     </audio>
     <h3>Video</h3>
     <video controls preload="metadata" playsinline>
-      <source src="videos/01_Video_Ilustracion_Digital_10s.mp4" type="video/mp4">
+      <source src="videos/Master.mp4" type="video/mp4">
       Tu navegador no admite video HTML5.
     </video>
     <p></p>
+  </section>
+
+
+  <section id="laboratorio">
+    <h2>Mi laboratorio generativo</h2>
+    <div class="lab">
+      <div class="lab-lienzo">
+        <canvas id="lab-lienzo" width="1436" height="882" role="img" aria-label="Composición geométrica Órbita digital"></canvas>
+      </div>
+
+      <div class="lab-info">
+        <h3>Órbita digital</h3>
+        <p>Explora composiciones geométricas inspiradas en el movimiento de los cuerpos del universo, combinando figuras, órbitas y color.</p>
+      </div>
+
+      <div class="lab-controles" role="group" aria-label="Controles de la composición">
+        <button type="button" class="lab-btn lab-fria" data-paleta="fria" data-icono="paleta" aria-pressed="true">Paleta fría</button>
+        <button type="button" class="lab-btn lab-calida" data-paleta="calida" data-icono="paleta" aria-pressed="false">Paleta cálida</button>
+        <button type="button" class="lab-btn lab-generar" id="lab-generar" data-icono="mezclar">Generar composición</button>
+        <button type="button" class="lab-btn lab-guardar" id="lab-guardar" data-icono="descargar">Guardar PNG</button>
+        
+      </div>
+    </div>
   </section>
 
  
