@@ -124,7 +124,7 @@
   #laboratorio .lab-btn { transition: none; }
   #laboratorio .lab-btn:hover { transform: none; }
 }
-/* Fondo: mitad del logo (ala izquierda) pegada al borde derecho */
+/* Logo mitad */
 body.personal::before {
   content: "";
   position: fixed;

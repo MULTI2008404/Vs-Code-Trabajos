@@ -39,7 +39,7 @@
 
   const estado = { paleta: 'fria', semilla: 2026 };
   let composicion;
-    let tiempo = 0; // segundos desde que carga la página
+    let tiempo = 0; 
   const giro = o => o.rot + Math.sin(tiempo * 0.6 + o.rx) * 0.06; 
 
   /* ---------- Azar con semilla ---------- */
